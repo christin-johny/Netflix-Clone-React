@@ -6,6 +6,7 @@ import bell_icon from '../../assets/bell_icon.svg'
 import profile_img from '../../assets/profile_img.png'
 import caret_icon from '../../assets/caret_icon.svg'
 import { Menu, X } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -15,12 +16,12 @@ const Navbar = () => {
       <div className='navbar-left'>
         <img src={logo} alt="Netflix" />
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          <li>Home</li>
+          <li><Link to='/'>Home</Link></li>
           <li>TV shows</li>
           <li>Movies</li>
           <li>Games</li>
           <li>New & Popular</li>
-          <li>My List</li>
+          <li><Link to='/wishlist'>My List</Link></li>
           <li>Browse by Languages</li>
         </ul>
         <div className='hamburger' onClick={() => setMenuOpen(!menuOpen)}>

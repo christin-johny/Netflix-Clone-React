@@ -82,6 +82,11 @@
   cursor: pointer;
   color: #fff;
 }
+.nav-links li a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 /* RESPONSIVE STYLES */
 @media screen and (max-width: 1024px) {

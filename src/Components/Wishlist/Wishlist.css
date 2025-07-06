@@ -1,17 +1,22 @@
-/* Wishlist.css */
 .wishlist-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
-  padding: 30px;
-  padding-top: 100px;
-  padding-left: 80px;
+  padding: 40px 80px;
+  justify-content: center;
+}
 
+.title {
+  color: white;
+  padding: 80px 80px 20px;
+  font-size: 40px;
+  font-weight: 500;
 }
 
 .poster {
   width: 100%;
-  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
@@ -19,5 +24,36 @@
 }
 
 .poster:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+}
+
+@media screen and (max-width: 768px) {
+  .wishlist-container {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    padding: 30px 40px;
+  }
+
+  .title {
+    padding: 60px 40px 20px;
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wishlist-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .poster {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .title {
+    padding: 50px 20px 20px;
+    font-size: 28px;
+    text-align: left;
+  }
 }
