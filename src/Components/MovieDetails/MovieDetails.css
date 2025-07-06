@@ -1,0 +1,103 @@
+.movie-details-container {
+  background-color: #111;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.video-section {
+  width: 100%;
+  background-color: #000;
+  margin-bottom: 1rem;
+}
+
+.backdrop {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.details-content {
+  
+  width: 100%;
+  text-align: left; 
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.details-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  word-break: break-word;
+}
+
+.wishlist-button {
+  background-color: #e50914;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.wishlist-button:disabled {
+  background-color: #444;
+  cursor: default;
+}
+
+.details-rating {
+  margin-top: 1.5rem;
+  color: #aaa;
+  font-size: 1.1rem;
+}
+
+.details-overview {
+  margin-top: 1rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .details-title {
+    font-size: 1.8rem;
+  }
+
+  .wishlist-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .details-rating,
+  .details-overview {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,23 @@
+/* Wishlist.css */
+.wishlist-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  padding-top: 100px;
+  padding-left: 80px;
+
+}
+
+.poster {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.poster:hover {
+  transform: scale(1.05);
+}

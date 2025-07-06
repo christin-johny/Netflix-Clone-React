@@ -1,29 +1,47 @@
-import React from 'react';
-import './Navbar.css';
+import React, { useState } from 'react'
+import './Navbar.css'
+import logo from '../../assets/logo.png'
+import search_icon from '../../assets/search_icon.svg'
+import bell_icon from '../../assets/bell_icon.svg'
+import profile_img from '../../assets/profile_img.png'
+import caret_icon from '../../assets/caret_icon.svg'
+import { Menu, X } from 'lucide-react'
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
-    <div className="navbar">
-      <div className='navbar-wrapper'>
-          <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png"
-          alt="Netflix Logo"
-          className="logo"
-        />
-
-        <div className="navbar-right">
-          <div className="dropdown">
-            <select>
-              <option value="en">English</option>
-              <option value="hi">हिन्दी</option>
-            </select>
-          </div>
-
-          <button className="signout-btn">Sign Out</button>
+    <div className='navbar'>
+      <div className='navbar-left'>
+        <img src={logo} alt="Netflix" />
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          <li>Home</li>
+          <li>TV shows</li>
+          <li>Movies</li>
+          <li>Games</li>
+          <li>New & Popular</li>
+          <li>My List</li>
+          <li>Browse by Languages</li>
+        </ul>
+        <div className='hamburger' onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </div>
-      </div>      
-    </div>
-  );
-};
+      </div>
 
-export default Navbar;
+      <div className='navbar-right'>
+        <img src={search_icon} alt="Search" className='icons' />
+        <p className="children">Children</p>
+        <img src={bell_icon} alt="Bell" className='icons' />
+        <div className='navbar-profile'>
+          <img src={profile_img} alt="Profile" className='profile' />
+          <img src={caret_icon} alt="caret" />
+          <div className="dropdown">
+            <p>Sign Out of Netflix</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Navbar
