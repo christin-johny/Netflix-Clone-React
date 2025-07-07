@@ -61,20 +61,37 @@
   position: absolute;
   top: 100%;
   right: 0;
-  background: #191919;
-  padding: 18px 22px;
-  border-radius: 2px;
-  text-decoration: underline;
   display: none;
-}
-
-.navbar .dropdown p {
-  font-size: 13px;
-  cursor: pointer;
 }
 
 .navbar-profile:hover .dropdown {
   display: block;
+}
+
+.dropdown {
+  padding: 0;
+  border-radius: 0;
+  background: transparent; /* removed background */
+  box-shadow: none;
+}
+
+.signout-button {
+  background-color: #e50914; /* Netflix red */
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* optional subtle shadow */
+}
+
+.signout-button:hover {
+  background-color: #b00610; /* darker red on hover */
 }
 
 .hamburger {
@@ -82,13 +99,12 @@
   cursor: pointer;
   color: #fff;
 }
+
 .nav-links li a {
   text-decoration: none;
   color: inherit;
 }
 
-
-/* RESPONSIVE STYLES */
 @media screen and (max-width: 1024px) {
   .navbar-left ul.nav-links {
     position: absolute;

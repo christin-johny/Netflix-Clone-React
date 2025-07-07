@@ -11,7 +11,7 @@ const WishlistCard = ({movie}) => {
     <div>
       <img
             key={movie.id}
-            className='poster'
+            className='wishlistPoster'
             src={`${baseImgUrl}${movie.poster_path}`}
             alt={movie.title}
             onClick={() => handleClick(movie)}

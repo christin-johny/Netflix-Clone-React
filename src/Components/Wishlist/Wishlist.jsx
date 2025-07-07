@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from '../../Axios';
 import { Api_key } from '../../Constants/Constants';
 import WishlistCard from '../WishlistCard/WishlistCard';
-import Navbar from '../Navbar/Navbar'
+
 import './Wishlist.css'
+import Navbar from '../Navbar/navbar';
 
 const Wishlist = () => {
   const [wishlist] = useState(localStorage.getItem('wishlist') ? JSON.parse(localStorage.getItem('wishlist')) : []);
@@ -29,7 +30,7 @@ const Wishlist = () => {
 
   return (
   <>
-    <Navbar />
+    <Navbar/>
     <h3 className='title'>My List</h3>
     <div className="wishlist-container">
       {movies.map((movie) => (
